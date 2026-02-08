@@ -43,7 +43,7 @@ const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ authorizedUsers, onSu
     e.preventDefault();
     
     // 1. Chequear Super Admin
-    if (password === 'puravida') {
+    if (password === import.meta.env.VITE_SUPER_ADMIN_KEY){
       onSuccess('SUPER_ADMIN');
       onClose();
       return;
