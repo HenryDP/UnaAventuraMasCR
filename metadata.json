@@ -1,0 +1,8 @@
+{
+  "name": "Una Aventura Más CR",
+  "description": "Una plataforma premium de turismo para Costa Rica que permite gestionar, editar y vender tours inolvidables con asistencia de IA para contenido y edición de imágenes.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
