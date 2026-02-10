@@ -8,7 +8,7 @@ import Layout from './components/Layout';
 import TourCard from './components/TourCard';
 import HeroCarousel from './components/HeroCarousel';
 import ReviewsSection from './components/ReviewsSection';
-
+import { testFirebase } from "./firebase-test";
 // Modales críticos
 import AuthModal from './components/AuthModal';
 import AdminLoginModal from './components/AdminLoginModal';
@@ -151,45 +151,49 @@ export const App: React.FC = () => {
   const dragStartRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    const initApp = async () => {
-      try {
-        await db.init();
-        setDbReady(true);
-        
-        const [criticalTours, criticalGeneral, criticalCarousel] = await Promise.all([
-          db.tours.getAll(),
-          db.config.getGeneral(DEFAULT_GENERAL_CONFIG),
-          db.config.get('carousel', DEFAULT_CAROUSEL_IMAGES)
-        ]);
-        
-        setTours(criticalTours.length > 0 ? criticalTours : INITIAL_TOURS);
-        setGeneralConfig(criticalGeneral);
-        setCarouselImages(criticalCarousel as string[]);
-        setLoading(false);
-        
-        Promise.all([
-          db.config.getPayment(DEFAULT_PAYMENT_CONFIG),
-          db.config.getAbout(DEFAULT_ABOUT_DATA),
-          db.config.getFooter(DEFAULT_FOOTER_CONFIG),
-          db.admins.getAll(),
-          db.reviews.getAll(),
-          db.config.getLastSync()
-        ]).then(([p, a, f, ad, r, ls]) => {
-          setPaymentConfig(p);
-          setAboutData(a);
-          setFooterConfig(f);
-          setAdminUsers(ad);
-          setReviews(r);
-          setLastSync(ls);
-        });
+  // 🔥 PRUEBA FIREBASE (una sola vez)
+  testFirebase();
 
-      } catch (err) {
-        console.error("Critical DB Error:", err);
-        setLoading(false);
-      }
-    };
-    initApp();
-  }, []);
+  const initApp = async () => {
+    try {
+      await db.init();
+      setDbReady(true);
+
+      const [criticalTours, criticalGeneral, criticalCarousel] = await Promise.all([
+        db.tours.getAll(),
+        db.config.getGeneral(DEFAULT_GENERAL_CONFIG),
+        db.config.get('carousel', DEFAULT_CAROUSEL_IMAGES)
+      ]);
+
+      setTours(criticalTours.length > 0 ? criticalTours : INITIAL_TOURS);
+      setGeneralConfig(criticalGeneral);
+      setCarouselImages(criticalCarousel as string[]);
+      setLoading(false);
+
+      Promise.all([
+        db.config.getPayment(DEFAULT_PAYMENT_CONFIG),
+        db.config.getAbout(DEFAULT_ABOUT_DATA),
+        db.config.getFooter(DEFAULT_FOOTER_CONFIG),
+        db.admins.getAll(),
+        db.reviews.getAll(),
+        db.config.getLastSync()
+      ]).then(([p, a, f, ad, r, ls]) => {
+        setPaymentConfig(p);
+        setAboutData(a);
+        setFooterConfig(f);
+        setAdminUsers(ad);
+        setReviews(r);
+        setLastSync(ls);
+      });
+
+    } catch (err) {
+      console.error("Critical DB Error:", err);
+      setLoading(false);
+    }
+  };
+
+  initApp();
+}, []);
 
   const handleDataChange = async () => {
     if (!dbReady || !isAdmin) return;
