@@ -1,14 +1,14 @@
 import React, { useState, useEffect, Suspense, useRef } from 'react';
 import { Tour, TourCategory, Province, PaymentConfig, User, AboutData, FooterConfig, Difficulty, DurationCategory, AdminUser, AdminRole, Language, Review, GeneralConfig } from './types';
-import { db } from './services/db';
-import { useTranslation } from './services/translations';
-import { downloadProjectAsZip } from './services/exportService';
+import { db } from './scr/services/db';
+import { useTranslation } from './scr/services/translations';
+import { downloadProjectAsZip } from './scr/services/exportService';
 import Layout from './components/Layout';
 import TourCard from './components/TourCard';
 import HeroCarousel from './components/HeroCarousel';
 import ReviewsSection from './components/ReviewsSection';
 import { doc, getDoc } from "firebase/firestore";
-import { firestore } from "./services/firebase";
+import { firestore } from "./scr/services/firebase";
 
 // Modales críticos
 import AuthModal from './components/AuthModal';

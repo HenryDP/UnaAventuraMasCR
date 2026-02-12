@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Tour, Language } from '../types';
-import { useTranslation } from '../services/translations';
+import { Tour, Language } from '../scr/types';
+import { useTranslation } from '../scr/services/translations';
 
 interface TourCardProps {
   tour: Tour;

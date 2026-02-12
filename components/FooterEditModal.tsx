@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { FooterConfig } from '../types';
+import { FooterConfig } from '../scr/types';
 
 interface FooterEditModalProps {
   config: FooterConfig;

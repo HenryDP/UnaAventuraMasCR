@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
-import { User } from '../types';
-import { db } from '../services/db';
+import { User } from '../scr/types';
+import { db } from '../scr/services/db';
 
 interface UsersManagementModalProps {
   onClose: () => void;

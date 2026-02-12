@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Tour, Booking } from '../types';
-import { db } from '../services/db';
+import { Tour, Booking } from '../scr/types';
+import { db } from '../scr/services/db';
 
 interface BookingsReportModalProps {
   tour: Tour;

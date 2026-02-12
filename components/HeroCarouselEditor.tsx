@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { processImage } from '../services/imageUtils';
+import { processImage } from '../scr/services/imageUtils';
 
 interface HeroCarouselEditorProps {
   images: string[];
