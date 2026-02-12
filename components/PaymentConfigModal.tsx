@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { PaymentConfig, LinkedAccount } from '../scr/types';
+import { PaymentConfig, LinkedAccount } from '../src/types';
 
 interface PaymentConfigModalProps {
   config: PaymentConfig;

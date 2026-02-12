@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { processImage } from '../scr/services/imageUtils';
+import { processImage } from '../src/services/imageUtils';
 
 interface FooterCarouselEditorProps {
   images: string[];

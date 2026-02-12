@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Tour, TourCategory, Province, Difficulty, DurationCategory } from '../scr/types';
-import { generateTourDescription } from '../scr/services/geminiService';
-import { processImage } from '../scr/services/imageUtils';
+import { Tour, TourCategory, Province, Difficulty, DurationCategory } from '../src/types';
+import { generateTourDescription } from '../src/services/geminiService';
+import { processImage } from '../src/services/imageUtils';
 
 interface AdminPanelProps {
   tour?: Tour;

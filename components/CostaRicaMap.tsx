@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Province } from '../scr/types';
+import { Province } from '../src/types';
 
 interface CostaRicaMapProps {
   selectedProvince: string;

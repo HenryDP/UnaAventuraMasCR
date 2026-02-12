@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Tour, PaymentConfig, Language, Booking, User } from '../scr/types';
-import { useTranslation } from '../scr/services/translations';
-import { db } from '../scr/services/db';
+import { Tour, PaymentConfig, Language, Booking, User } from '../src/types';
+import { useTranslation } from '../src/services/translations';
+import { db } from '../src/services/db';
 
 interface CheckoutModalProps {
   tour: Tour;

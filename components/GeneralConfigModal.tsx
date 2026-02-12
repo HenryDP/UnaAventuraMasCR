@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { GeneralConfig } from '../scr/types';
-import { processImage } from '../scr/services/imageUtils';
+import { GeneralConfig } from '../src/types';
+import { processImage } from '../src/services/imageUtils';
 
 interface GeneralConfigModalProps {
   config: GeneralConfig;

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { User } from '../scr/types';
-import { db } from '../scr/services/db';
+import { User } from '../src/types';
+import { db } from '../src/services/db';
 
 interface AuthModalProps {
   onLoginSuccess: (user: User) => void;

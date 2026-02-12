@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { User, FooterConfig, Language } from '../scr/types';
-import { useTranslation } from '../scr/services/translations';
+import { User, FooterConfig, Language } from '../src/types';
+import { useTranslation } from '../src/services/translations';
 import TermsModal from './TermsModal';
 
 interface LayoutProps {

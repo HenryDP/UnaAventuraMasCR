@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { AdminUser } from '../scr/types';
+import { AdminUser } from '../src/types';
 
 interface TeamManagementModalProps {
   adminUsers: AdminUser[];

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { AdminUser, AdminRole } from '../scr/types';
+import { AdminUser, AdminRole } from '../src/types';
 
 interface AdminLoginModalProps {
   authorizedUsers: AdminUser[];

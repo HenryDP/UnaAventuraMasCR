@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Review } from '../scr/types';
+import { Review } from '../src/types';
 
 interface ReviewModalProps {
   onSubmit: (review: Omit<Review, 'id' | 'date'>) => void;

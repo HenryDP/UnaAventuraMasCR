@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { downloadProjectAsZip } from '../scr/services/exportService';
+import { downloadProjectAsZip } from '../src/services/exportService';
 
 interface DeploymentModalProps {
   onClose: () => void;

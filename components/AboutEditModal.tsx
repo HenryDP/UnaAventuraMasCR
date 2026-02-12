@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { AboutData } from '../scr/types';
-import { processImage } from '../scr/services/imageUtils';
+import { AboutData } from '../src/types';
+import { processImage } from '../src/services/imageUtils';
 
 interface AboutEditModalProps {
   data: AboutData;
