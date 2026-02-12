@@ -25,7 +25,7 @@ export const downloadProjectAsZip = async () => {
 </head>
 <body class="bg-stone-50 text-stone-900">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
 </body>
 </html>`,
     'package.json': JSON.stringify({
